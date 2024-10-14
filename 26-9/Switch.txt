@@ -1,0 +1,307 @@
+Arithmetic Operation
+Write a C program to do a arithmetic operation on two numbers by using Switch Case. 
+Take the operators(+,-,*,/,%) as cases and take the input from the user that what kind of operation user want to do on two number.
+
+
+Sample input :
+
+Enter num1 :10
+Enter num2 :20
+Enter operation : *
+
+
+Sample output :
+
+Multiplication is :200
+Sample Input
+Enter num1 :10
+Enter num2 :20
+Enter operation : *
+Sample Output
+
+Multiplication is :200
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    char operation;
+    
+    printf("Enter num1: ");
+    scanf("%d", &num1);
+    
+    printf("Enter num2: ");
+    scanf("%d", &num2);
+    
+    printf("Enter operation (+, -, *, /, %%): ");
+    scanf(" %c", &operation);
+    switch(operation) {
+        case '+':
+        printf("Addition is: %d\n", num1 + num2);
+        break;
+        case '-':
+        printf("Subtraction is: %d\n", num1 - num2);
+        break;
+        case '*':
+        printf("Multiplication is: %d\n", num1 * num2);break;
+        case '/':
+        printf("Division is: %d\n", num1 / num2);
+        break;
+        case '%':
+        if (num2 != 0)
+        printf("Modulus is: %d\n", num1 % num2);
+        else
+        printf("Error: Division by zero is not allowed.\n");
+        break;
+        default:
+        printf("Invalid operation.\n");
+        }
+        
+        return 0;
+        }
+
+===============================================================================================================
+
+Maximum between two numbers
+Write a C program to find the maximum between two numbers using Switch statement.
+Sample Input
+20 30
+Sample Output
+30 is maximum
+
+#include<stdio.h>
+int main(){
+    int num1,num2;
+    scanf("%d%d",&num1,&num2);
+
+    switch(num1>num2){
+    case 1:
+    printf("%d is Maximum.",num1);
+    break;
+    default:
+    printf("%d is Maximum.",num2);
+    }
+    return 0;
+}
+
+===============================================================================================================
+
+Vowel or Consonant
+Write a C program to check whether a given Alphabet is vowel or consonant or Special characer using Switch Case.
+
+Sample input  : A
+Sample output : Vowel
+
+Sample input  : B
+Sample output : Consonant
+
+Sample input  : @
+Sample output : Special character
+Sample Input
+a
+Sample Output
+Vowel
+
+
+#include<stdio.h>
+int main(){
+    char ch;
+    printf("Enter Character: ");
+    scanf("%c",&ch);
+    if(ch>='A' && ch<='Z')ch+=32;
+    if(ch>='a' && ch<='z'){
+        switch(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            case 1:
+            printf("Vowel",ch);
+            break;
+            default:
+            printf("Consonant",ch);
+        }
+    }
+        else if(ch>=0 && ch<=9) printf("Digit",ch);
+        else
+        printf("Special character");
+}
+
+===============================================================================================================
+
+Even or Odd
+Write a C program to check the number is even or odd by using Switch Case.
+Sample Input
+2
+
+3
+Sample Output
+even
+
+odd
+
+#include<stdio.h>
+int main(){
+    int num;
+    scanf("%d",&num);
+
+    switch(num%2 == 0){
+        case 1:
+        printf("Even",num);
+        break;
+        default:
+        printf("Odd",num);
+    }
+    return 0;
+}
+
+===============================================================================================================
+
+Problem Statement:
+Write a C program that takes a month number (1-12) as input from the user and prints the number of days in that month using a switch statement. 
+If the user enters a number outside the range of 1-12, the program should display an error message.
+
+2. Explanation:
+You need to use a switch statement to handle different cases for each month.
+For months with 31 days (January, March, May, July, August, October, December), display "31 days".
+For months with 30 days (April, June, September, November), display "30 days".
+For February (month 2), print "28 or 29 days (depending on leap year)" as February can have 28 or 29 days.
+For any invalid month number (not between 1 and 12), print "Invalid month number!".
+
+3. Additional Considerations:
+The program should handle user input and validate it using a switch-case structure.
+No need for a leap year calculation in this basic program, but mention that leap years affect February’s day count.
+
+
+Sample input_1  : 3
+Sample output_1 : 31 days
+
+Sample input_2  : 2
+Sample output_2 : 28 or 29 days (depending on leap year)
+
+Sample input_3  : 11
+Sample output_3 : 30 days
+Sample Input
+Sample input_1  : 3
+Sample Output
+Sample output_1 : 31 days
+
+
+#include<stdio.h>
+int main(){
+    int Month_num;
+    printf("Month number: ");
+    scanf("%d",&Month_num);
+
+    switch(Month_num){
+        case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+        printf("31 Days\n");
+        break;
+        case 4:case 6:case 9:case 11:
+        printf("30 Days\n");
+        break;
+        case 2:
+        printf("28 or 29 days (depending on leap year)\n");
+        break;
+    }
+}
+
+
+===============================================================================================================
+
+user to control the state of a light and an air conditioner (AC).
+[Solve Using Switch-case & Goto Statment]
+
+You are required to write a C program that allows the user to control the state of a light and an air conditioner (AC). 
+The program should present the following menu options to the user:
+
+Turn ON the Light.
+Turn OFF the Light.
+Turn ON the AC.
+Turn OFF the AC.
+Based on the user's choice, the program should display the corresponding action message:
+
+If the user selects option 1, display "Light is now ON."
+If the user selects option 2, display "Light is now OFF."
+If the user selects option 3, display "AC is now ON."
+If the user selects option 4, display "AC is now OFF."
+The program should also handle invalid input:
+
+If the user enters a number outside the range of 1 to 4, display an error message indicating "Invalid choice! Please enter 1, 2, 3 or 4."
+The program should allow the user to retry entering a valid option by using the (goto statement).
+
+Example_1:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 1
+Light is now ON.
+
+Example_2:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 4
+AC is now OFF.
+
+
+Example_3:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 5
+-----------------------------------------
+Invalid choice! Please enter 1, 2, 3, or 4.
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int button;
+
+    list:
+    printf("\nSelect an option:\n");
+    printf("1. Turn ON the Light\n");
+    printf("2. Turn OFF the Light\n");
+    printf("3. Turn ON the AC\n");
+    printf("4. Turn OFF the AC\n");
+    printf("Enter your choice: ");
+    scanf("%d", &button);
+
+   
+    switch (button) {
+        case 1:
+            printf("Light is now ON.\n");
+            break;
+        case 2:
+            printf("Light is now OFF.\n");
+            break;
+        case 3:
+            printf("AC is now ON.\n");
+            break;
+        case 4:
+            printf("AC is now OFF.\n");
+            break;
+        default:
+            printf("Invalid choice! Please enter 1, 2, 3, or 4.\n");
+            goto list;  
+
+    return 0;
+   }
+}
+
+
+
+

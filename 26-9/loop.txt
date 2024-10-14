@@ -1,0 +1,119 @@
+Find Factorial
+write a C program to find the factorial of a given number. Take the input from the user.
+Sample Input
+Enter a number : 5
+Sample Output
+Factoria of 5 : 120
+
+#include<stdio.h>
+int main(){
+    int n,f=1;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    while(n>1){
+        f=f*n;
+        n--;
+    }
+    printf("Factorial: %d",f);
+}
+
+============================================================================================
+Addition of Natural Number
+Write a C program to add all the natural number from 1 to n. Ask the user to give n value and print the addition value.
+Sample Input
+Enter n value : 10
+Sample Output
+Sum of the natural number from 1 to 10 : 55
+
+#include<stdio.h>
+int main(){
+    int n,i=1,sum=0;
+    printf("Enter n value: ");
+    scanf("%d",&n);
+
+    while(n>=i){
+        sum=sum+n;
+        n--;
+    }
+    printf("Sum of nummber: %d",sum);
+}
+============================================================================================
+
+Sum Of Digit
+Write a C program that asks the user to input a three-digit integer and calculates the sum of its digits. Using While loop.
+
+
+
+Input as : 
+
+Enter a three digit number : 123
+
+
+
+Output as :
+
+Sum of the digits : 6
+Sample Input
+Enter a three digit number : 123
+Sample Output
+Sum of the digits : 6
+
+#include<stdio.h>
+int main(){
+    int n,r,sum=0;
+    scanf("%d",&n);
+
+    while(n!=0){
+        r=n%10;
+        sum=sum+r;
+        n=n/10;
+    }
+    printf("Sum: %d",sum);
+}
+
+============================================================================================
+
+Count The Digit
+Write a C program that asks the user to input an integer and count the digts and print the count of the digits.
+
+Sample Input
+Enter a number : 546
+Sample Output
+Count of the digits is : 3
+
+#include <stdio.h>
+
+int main() {
+    int num, count = 0;
+
+    scanf("%d", &num);
+    while (num != 0){
+        num= num/10;
+        count++;
+    }
+    printf("Count of the digit: %d",count);
+    return 0;
+}
+============================================================================================
+
+Reverse a number
+Write a C prgram that asks the user to input an integer and reverse that number and display the reverse of that given number.
+Sample Input
+Enter a number : 123
+Sample Output
+Reverse of the given number is : 321
+
+#include <stdio.h>
+
+int main(){
+    int n,rem ;
+    scanf("%d",&n);
+
+    while(n>0){
+        rem = n%10;
+        printf("%d",rem);
+        n = n/10;
+    }
+    return 0;
+}
+============================================================================================

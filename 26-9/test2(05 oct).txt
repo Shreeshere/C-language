@@ -1,0 +1,383 @@
+what is output of following code?
+ #include<stdio.h>
+ int main()
+ { int a=12; 
+int b=10; 
+if(a==12)
+ { printf("inside-if"); } 
+printf(" ok "); 
+else 
+{ printf("inside-else"); } 
+return 0;
+ }	
+
+Compile-Time-Error	Compile-Time-Error		
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? [User Input is : 10 20 ] 
+
+#include<stdio.h>
+ int main() 
+{ int a; int b;
+ if(scanf("%d%d",&a,&b)==2) 
+{ printf("%d ",a); }
+ else 
+{ printf("%d ",b); } 
+return 0; 
+
+}	
+
+Error	10	Error	10
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is output of following code? 
+#include<stdio.h>
+ int main()
+ { int a=32;
+ int b=32; 
+if(a==b); {
+ a++; printf("Both are Equal a=%d b=%d",a,b); }
+ else {
+ printf("Both are not Equal a=%d b=%d",a,b); }
+ return 0; 
+}
+
+Compile-Time -Error	Compile-Time -Error
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+#include<stdio.h> 
+int main() {
+ int a = 0; 
+if((a++) && a) printf("Hello");
+ else printf("Hi");
+ return 0; 
+}	
+
+Hi	Hi
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+#include<stdio.h>
+ int main() {
+ int a = 0; if(if(a==0)) printf("Valid..!");
+ else printf("Not Valid..!");
+ return 0; 
+}	
+
+Compile-Time-Error	Compile-Time-Error
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h> 
+int main() {
+ int a=12; int b=10; 
+if(a) printf("Java"); printf(" & ");
+ if(b) printf(".Net");
+ else if(a!=b) printf(" Python");
+ return 0;
+ }
+
+	Java &	Java & .Net
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ if( 10 > 10 ) printf("Singapore\n");
+ else if(4%2 == 0) printf("England\n");
+ printf("Poland");
+ return 0;
+ }	
+
+England Poland	England Poland
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the correct way to check multiple conditions in a single 'if' statement in C?
+
+	
+if (condition1 && condition2) { }	if (condition1 && condition2) { }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=1; a++;
+ if(a==1) printf("1st Block");
+ else (a==2) printf("2nd Block");
+ return 0;
+ }
+
+	1st Block	Compile-Time-Error
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+#include<stdio.h>
+ int main() {
+ if("abc") {
+ printf("India\n");
+ }
+ if('c') {
+ printf("Honey\n"); }
+ printf("ZING");
+ return 0;
+ }
+
+	ZING	India Honey ZING
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ if(10 == -10);
+ printf("Think ");
+ if(10 != 10) printf("Which "); 
+ else if(10 >= 0) printf("Is ");
+ else ; printf("good");
+ return 0;
+ }
+
+
+	Think Is good	Think Is good
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+
+#include<stdio.h>
+ int main() {
+ int a = 0;
+ if((a++) || a) printf("Hello");
+ else printf("Hi");
+ return 0;
+ }
+
+	Hello	Hello
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+#include<stdio.h>
+ int main() {
+ int a=99;
+ int b=a++ + ++a + a--;
+ if(a==101) {
+ if(b==301) {
+ printf("Nested if Block"); }
+ else {
+ printf("Nested else Block");
+ }
+ }
+ else {
+ printf("Outer else Block");
+ }
+ return 0;
+ }
+
+	Outer else Block	Outer else Block
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ float a=12;
+ int b=10;
+ if(a%b==2) printf("Wellcome To ");
+ else
+ printf("U Can Go");
+ printf("Test");
+ return 0;
+ }
+
+	Wellcome To Test	Compile-Time -Error
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following is a valid 'if…else if…else' statement in C?	
+
+
+if (condition) { } else if (condition) { } else { }	if (condition) { } else if (condition) { } else { }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=99;
+ int b=100;
+ if(a != b) {
+ printf("Inside if block ");
+ }
+ if(a++==b--) {
+ printf("2nd if block "); 
+} 
+else printf("1st else block");
+ else printf("2nd else block");
+ return 0; }
+
+
+	2nd else block	Compile-time-Error
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=10;
+ if((a++) !=10) printf("True");
+ else printf("False");
+ return 0;
+ }
+
+	False	False
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+
+ #include<stdio.h>
+ int main() {
+ int a =10;
+ int b=20;
+ if(a>b) {
+ printf("Good"); 
+} else if(1,2,0) {
+ printf("Bad"); 
+} else {
+ printf("Averge");
+ } return 0;
+ }
+
+	Averge	Averge
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+
+#include<stdio.h>
+ int main() {
+ int a=5;
+ int b=2;
+ if((float)(a/b)==2.5) printf("Float Value");
+
+ else printf("Int Value");
+ return 0;
+ }
+
+	Int Value	Int Value
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=99;
+ int b=100;
+ if(a<=b) { if(b >= ++a) {
+ printf("Nested if Block");
+ } else {
+ printf("Nested else Block"); 
+} 
+} printf("OutSide Block");
+ return 0;
+ }
+
+	Nested if BlockOutSide Block	Nested if BlockOutSide Block
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a = 0;
+ int b = a++;
+ if(a==1) if(b==0) printf("Surprise-Test");
+ else printf("Not Surprise-Test"); return 0;
+ }
+
+	Surprise-Test	Surprise-Test
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following is the correct syntax for an if-else statement in C?
+
+	if (condition) { block1 } else { block2 }	if (condition) { block1 } else { block2 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a =10;
+ int b=20;
+ if(a>b) {
+ printf("India\n");
+ } else if(!(b>a)) {
+ printf("Honey\n");
+ } 
+printf("ZING");
+ return 0;
+ }
+	ZING	ZING
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following are incorrect statements? [ If int a=10. ]	
+
+if( a= --10 ) printf("IncludeHelp");	if( a= --10 ) printf("IncludeHelp");
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=10;
+ int b=20;
+ if(a>=b) if(a<=b) printf("Both Condition true");
+ else printf("Both Condition not true");
+ return 0;
+ }
+
+	No Output	No Output
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code?
+ #include<stdio.h>
+ int main() {
+ int a=99;
+ int b=100;
+ if(!(++a|b)) {
+ printf("Inside if block "); }
+ if(a++==--b) {
+ printf("2nd if block "); 
+} else if(a==b) printf("1st else block");
+ else printf("2nd else block");
+ return 0;
+ }
+
+	2nd else block	2nd else block
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+#include<stdio.h>
+ int main() {
+ int a=10;
+ int b=20;
+ if(printf("%d",a)) printf(" %d",a+b);
+ else printf(" %d",a-b);
+ return 0;
+ }
+
+	10 30	10 30
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which of the following statements about the 'if…else' structure in C is true?
+
+
+	The 'if' condition can include logical, relational, and arithmetic expressions.	The 'if' condition can include logical, relational, and arithmetic expressions.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+what is output of following code? 
+
+#include<stdio.h>
+ int main() {
+ int a=99;
+ int b=100;
+ if(a != b) printf("DOG ");
+ printf("CAT ");
+ else printf("LION");
+ return 0;
+ }
+
+	Compile-Time-Error	Compile-Time-Error
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Choose a correct statement regarding C Comparison Operators.	
+
+All the above	All the above
